@@ -3,12 +3,13 @@ package fr.esir.sr.SRproject.Server;
 import fr.esir.sr.SRproject.Client.ClientCallBack;
 import fr.esir.sr.SRproject.Game.GameImpl;
 
+import java.io.Serializable;
 import java.rmi.Naming;	//Import naming classes to bind to rmiregistry
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServerImpl implements Server {
+public class ServerImpl implements Server, Serializable {
 
     private List<ClientCallBack> clients = new ArrayList<>();
 

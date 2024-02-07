@@ -1,6 +1,6 @@
 package fr.esir.sr.SRproject.Game;
 
-import Player;
+import fr.esir.sr.SRproject.Game.Player;
 
 import javax.swing.*;
 import java.awt.*;

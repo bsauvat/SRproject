@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.Serializable;
 import java.rmi.Naming;			//Import the rmi naming - so you can lookup remote object
 import java.rmi.RemoteException;	//Import the RemoteException class so you can catch it
 import java.net.MalformedURLException;	//Import the MalformedURLException class so you can catch it
@@ -17,7 +18,7 @@ import java.rmi.NotBoundException;	//Import the NotBoundException class so you c
 import java.util.HashMap;
 import java.util.Map;
 
-public class ClientImpl extends JFrame implements KeyListener {
+public class ClientImpl extends JFrame implements KeyListener, Serializable {
 
     int cellSize;
     int gridSize;

@@ -1,8 +1,8 @@
 package fr.esir.sr.SRproject.Game;
 
-import Display;
-import fr.esir.sr.SRproject.Map;
-import fr.esir.sr.SRproject.Server.Map;
+import fr.esir.sr.SRproject.Game.Display;
+import fr.esir.sr.SRproject.Game.Map;
+import fr.esir.sr.SRproject.Game.Map;
 
 import java.awt.*;
 

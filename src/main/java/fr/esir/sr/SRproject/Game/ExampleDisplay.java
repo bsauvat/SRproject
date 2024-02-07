@@ -1,4 +1,4 @@
-package fr.esir.sr.SRproject;// -*- compile-command: "javac ExampleDisplay.java" -*-
+package fr.esir.sr.SRproject.Game;// -*- compile-command: "javac ExampleDisplay.java" -*-
 
 /* FT14Oct13
  *
@@ -9,8 +9,6 @@ package fr.esir.sr.SRproject;// -*- compile-command: "javac ExampleDisplay.java"
 
 import java.util.Map ;
 import java.util.HashMap ;
-import java.util.List ;
-import java.util.ArrayList ;
 
 import java.util.Random ;
 

@@ -1,6 +1,5 @@
-package fr.esir.sr.SRproject;
+package fr.esir.sr.SRproject.Game;
 
-import java.awt.event.KeyEvent;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

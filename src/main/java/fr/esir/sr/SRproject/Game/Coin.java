@@ -1,8 +1,12 @@
-package fr.esir.sr.SRproject;
+package fr.esir.sr.SRproject.Game;
+
+import Display;
+import fr.esir.sr.SRproject.Map;
+import fr.esir.sr.SRproject.Server.Map;
 
 import java.awt.*;
 
-public class Coin extends Map{
+public class Coin extends Map {
 
     public Coin(Display display) {
         super(display);

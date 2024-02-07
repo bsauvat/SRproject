@@ -1,4 +1,11 @@
-package fr.esir.sr.SRproject;
+package fr.esir.sr.SRproject.Client;
+
+import fr.esir.sr.SRproject.Game.Coin;
+import fr.esir.sr.SRproject.Game.Player;
+import fr.esir.sr.SRproject.Server.RemoteServices.RemoteServices;
+import fr.esir.sr.SRproject.Server.Server;
+import fr.esir.sr.SRproject.Server.ServerImpl;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -10,7 +17,7 @@ import java.rmi.NotBoundException;	//Import the NotBoundException class so you c
 import java.util.HashMap;
 import java.util.Map;
 
-public class GameClient extends JFrame implements KeyListener {
+public class ClientImpl extends JFrame implements KeyListener {
 
     int cellSize;
     int gridSize;
@@ -19,8 +26,9 @@ public class GameClient extends JFrame implements KeyListener {
     Container myContainer ;
     Coin[][] coinMap;
 
-    public GameClient(){
+    public ClientImpl(){
         super();
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocation(30, 30);
@@ -74,9 +82,14 @@ public class GameClient extends JFrame implements KeyListener {
     public static void main(String[] args) {
 
         try {
-            GameImpl g = (GameImpl)
-                    Naming.lookup("rmi://localhost/game");
-            g.InitClient();
+            RemoteServices services = (RemoteServices) Naming.lookup("//localhost/MyServer");
+            String response = services.sayHello();
+            System.out.println("Response from server: " + response);
+
+            // Assume server is a reference to the remote Server object
+            Server server = new ServerImpl();
+            ClientCallBack clientCallBack = new ClientCallBackImpl();
+            server.registerClientCallBack(clientCallBack);
         }
         // Catch the exceptions that may occur - rubbish URL, Remote exception
         // Not bound exception or the arithmetic exception that may occur in

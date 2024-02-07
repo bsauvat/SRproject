@@ -1,4 +1,4 @@
-package fr.esir.sr.SRproject;
+package fr.esir.sr.SRproject.Game;
 
 import java.awt.Graphics;
 import javax.swing.JComponent;

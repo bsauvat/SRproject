@@ -1,17 +1,13 @@
-package fr.esir.sr.SRproject;
+package fr.esir.sr.SRproject.Game;
 
-import javax.swing.*;
+import Player;
+
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
-import java.util.Scanner;
 
-public class GameImpl extends UnicastRemoteObject implements Game{
+public class GameImpl extends UnicastRemoteObject implements Game {
 
     int cellSize = 20 ;
     int gridSize = 20 ;
@@ -22,7 +18,7 @@ public class GameImpl extends UnicastRemoteObject implements Game{
     Display display = new Display();
 
 
-    protected GameImpl() throws RemoteException {
+    public GameImpl() throws RemoteException {
         super();
     }
 
@@ -30,6 +26,9 @@ public class GameImpl extends UnicastRemoteObject implements Game{
         // Création du player
         playerIDs[playerIDs.length] = playerIDs.length;
         players[players.length] = new Player(display);
+    }
+
+    public void InitClient() throws RemoteException{
 
     }
 
@@ -66,9 +65,5 @@ public class GameImpl extends UnicastRemoteObject implements Game{
         int j = rand.nextInt(gridSize);
         coinMap[i][j] = new Coin(display);
         coinMap[i][j].setGridPos(i,j);
-    }
-
-    public void InitClient() throws RemoteException{
-
     }
 }

@@ -1,12 +1,12 @@
-package fr.esir.sr.SRproject;
+package fr.esir.sr.SRproject.Game;
+
+import Player;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class Display extends JFrame {
     int cellSize = 20 ;
@@ -55,7 +55,7 @@ public class Display extends JFrame {
     } // EndMethod keyPressed
 
     public static void main(String[] a) {
-        JFrame window = new fr.esir.sr.SRproject.ExampleDisplay();
+        JFrame window = new ExampleDisplay();
     } // EndMethod main
 }
 
